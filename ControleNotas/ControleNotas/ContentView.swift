@@ -43,7 +43,7 @@ struct ContentView: View {
                     }
                     
                 }
-                .background(LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .background(LinearGradient(colors: [.blue, .cyan, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea())
             }
         }
