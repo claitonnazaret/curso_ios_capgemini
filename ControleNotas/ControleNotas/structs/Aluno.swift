@@ -17,7 +17,11 @@ struct Aluno: Identifiable {
         return (nota1 + nota2) / 2
     }
     
+    var isAprovado: Bool {
+        return media >= 7.0
+    }
+    
     var situacao: String {
-        return media >= 7.0 ? "✅" : "❌"
+        return isAprovado ? "Aprovado" : "Reprovado"
     }
 }

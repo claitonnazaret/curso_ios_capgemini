@@ -6,19 +6,21 @@
 //
 import SwiftUI
 
-struct HeaderAlunos: View {
+struct HeaderAlunosView: View {
     
     var body: some View {
-        VStack {
+        VStack(spacing: 2) {
             Image(systemName: "graduationcap.circle")
-                .font(.system(size: 60))
-                .colorInvert()
-            Text("Minha Turma").font(.largeTitle).bold()
-                .colorInvert()
+                .font(.system(size: 40))
+                .foregroundStyle(.white)
+            
+            Text("Minha Turma").font(.title).bold()
+                .foregroundStyle(.white)
+            
             Text("Cadastre alunos e acompanhe os resultados")
-                .font(.caption)
-                .colorInvert()
-        }.padding(.bottom, 10)
-        
+                .font(.subheadline)
+                .foregroundStyle(.white)
+            
+        }.padding(.vertical, 1)
     }
 }
