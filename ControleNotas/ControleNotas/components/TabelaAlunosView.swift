@@ -109,8 +109,4 @@ struct TabelaAlunosView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
-
 
