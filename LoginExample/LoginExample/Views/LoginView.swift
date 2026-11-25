@@ -42,23 +42,7 @@ struct LoginView: View {
                             .background(Color(.secondarySystemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                         
-                        HStack {
-                            if isPasswordVisible {
-                                TextField("Senha", text: $viewModel.loginPassword)
-                            } else {
-                                SecureField("Senha", text: $viewModel.loginPassword)
-                            }
-                            
-                            Button {
-                                isPasswordVisible.toggle()
-                            } label: {
-                                Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                        .padding()
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        PasswordField("Senha", text: $viewModel.loginPassword)
                     }
                     
                     if let error = viewModel.errorMessage {
